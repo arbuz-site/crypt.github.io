@@ -1,6 +1,6 @@
 async function getLocationInfo(ip) {
     try {
-        const response = await fetch(`https://c6c0e1a8e22e4a/${ip}?token=ВАШ_ТОКЕН`);
+        const response = await fetch(`https://ipinfo.io/${ip}?token=c6c0e1a8e22e4a`);
         const data = await response.json();
         return data;
     } catch (error) {
